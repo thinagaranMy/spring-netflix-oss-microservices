@@ -1,0 +1,18 @@
+# Defines the port where the config server is running so that rest of the services can pick up
+# their external configurations
+
+server:
+    port: 9090
+ 
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/thinagaranMy/microservices-config
+          searchPaths: MASTER
+
+
+    
